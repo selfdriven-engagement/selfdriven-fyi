@@ -18,7 +18,13 @@ layout: null
 	<link rel="stylesheet" href="/assets/css/landkit.theme.bundle.css" />
 	<link rel="stylesheet" href="/assets/css/2097.style-2.0.1.css" />
 
-	<title>selfdriven | Apps</title>
+	<title>
+	{% if page.title %}
+		{{ page.title }} | {{ site.title | default: "selfdriven FYI" }}
+	{% else %}
+		{{ site.title | default: "selfdriven FYI" }}
+	{% endif %}
+	</title>
 </head>
 
 <body>
